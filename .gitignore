@@ -1,2 +1,3 @@
 # le fichier .idea de Goland
-*.idea
+.idea
+.DS_Store
