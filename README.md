@@ -50,7 +50,7 @@ A distinctive feature of this package is the use of a "Missing Data" value for m
  and the regularization process frequently needs a Missing Data feature if there is no Measure for a specific period. Furthermore, it is mandatory to be able
  to differentiate between a valid measure of 0 (freezing water in C, or "no-earthquake" information for instance) and a missing value.
 
- We use a drop-in implementation of math.NaN() (so that import of math package is not required - math.Nan() works as well). Using NaN() avoids costly alternative
+ ~~We use a drop-in implementation of math.NaN() (so that import of math package is not required - math.Nan() works as well)~~ (_TODO_). Using NaN() avoids costly alternative
  solutions in terms of memory management (like adding variable like bool "IsValid" or using extensively pointers to float64 measures).
  The IEEE 754 floating-point standard implements a "Not a Number" value in float64 type. Using NaN() specification has several advantages:
 
@@ -58,7 +58,7 @@ A distinctive feature of this package is the use of a "Missing Data" value for m
 
  - Most interestingly in Go language, a NaN() belongs to the float64 type and is accepted by compiler
 
-- It is implemented in all most known languages
+- It is implemented in all most known languages implementing IEEE 754
 
 Using NaN() as drop-in for Missing Data requires nevertheless some work:
 
