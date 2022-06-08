@@ -77,9 +77,7 @@
 //
 // - Having a two-field struct requires most complex programs and do not avoid dedicated stat computations
 //
-// - If we were to follow this kind of solution we would use a "NonValid" field instead of "Valid"; because as it is
-// the default is valid, which makes control and bug research more complex.
-// - NullFloat64 are comparable even if non Valid. This is potentially harmful for computations.
+// - NullFloat64 are comparable even if non Valid. This is potentially errors prone.
 
 package timeseries
 
